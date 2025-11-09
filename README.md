@@ -1,7 +1,4 @@
 # New-Art-Commerce-and-Science-College-Website
-# NACSCP College Website - Modular Structure
-
-## Setup Instructions
 
 ### 1. File Structure
 Ensure all files are placed in the correct directories as shown in the structure.
