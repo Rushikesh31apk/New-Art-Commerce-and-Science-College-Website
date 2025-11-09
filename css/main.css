@@ -1,0 +1,458 @@
+:root {
+    --primary-color: #1e40af;
+    --secondary-color: #7c3aed;
+    --accent-color: #f59e0b;
+    --dark-bg: #1e293b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Top Bar Header */
+.top-bar-header {
+    background: white;
+    padding: 15px 0;
+    border-bottom: 3px solid #f59e0b;
+}
+
+.college-header-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.college-header-text {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.college-header-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b1538;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.college-affiliation {
+    font-size: 16px;
+    color: #1e40af;
+    font-weight: 600;
+}
+
+.sppu-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Announcement Ticker */
+.ticker-wrapper {
+    background: linear-gradient(120deg, #f59e0b, #ea580c, #dc2626);
+    color: white;
+    padding: 12px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.ticker {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    white-space: nowrap;
+}
+
+.ticker:hover {
+    animation-play-state: paused;
+}
+
+.ticker-item {
+    padding: 0 50px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Navigation */
+.navbar {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.college-logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.college-logo:hover {
+    transform: scale(1.1);
+}
+
+.college-name {
+    font-weight: bold;
+    color: #1e40af;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.college-motto {
+    font-size: 12px;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: #374151;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1e40af;
+    background: #eff6ff;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+    color: #1e40af;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    color: rgb(8, 8, 8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../images/11.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: 1;
+}
+
+.float-circle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    animation: float 15s infinite ease-in-out;
+    z-index: 2;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: #111;
+}
+
+.hero-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.hero-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, #e16e10, #2020ef);
+    color: white;
+}
+
+.btn-white-custom {
+    background: white;
+    color: #1e40af;
+}
+
+/* Sections */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #1f2937;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #6b7280;
+    font-size: 18px;
+    margin-top: -40px;
+    margin-bottom: 60px;
+}
+
+/* Stats Cards */
+.stat-card {
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: scale(1.1) translateY(-10px);
+}
+
+.stat-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 50px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-value {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1f2937;
+    margin: 10px 0;
+}
+
+.stat-label {
+    font-size: 18px;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+/* Info Cards */
+.info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 40px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Department Cards */
+.dept-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.dept-card:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.dept-header {
+    padding: 50px 30px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.dept-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.dept-body {
+    padding: 30px;
+}
+
+.dept-subject {
+    padding: 8px 0;
+    color: #374151;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dept-subject::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #2563eb;
+    border-radius: 50%;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #1e3a8a, #5b21b6, #7c3aed);
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer h5 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #fbbf24;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    margin-top: 40px;
+    padding-top: 30px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.3);
+}
+
+.scroll-top.show {
+    opacity: 1;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px) rotate(360deg);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
