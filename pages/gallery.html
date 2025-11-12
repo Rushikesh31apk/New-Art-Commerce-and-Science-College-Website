@@ -1,0 +1,275 @@
+<section class="section" style="background: linear-gradient(135deg, #1e293b, #0f172a); min-height: 100vh;">
+    <div class="container">
+        <h2 class="section-title" style="color: white;">Photo Gallery</h2>
+        <p class="section-subtitle" style="color: #cbd5e1;">Glimpses of campus life and activities</p>
+        
+        <!-- 3D Gallery Container -->
+        <div class="gallery-3d-container">
+            <div class="gallery-3d" id="gallery3d">
+                <div class="gallery-item" style="--i:0">
+                    <img src="images/1.jpg" alt="Gallery 1">
+                    <div class="gallery-caption">Campus View</div>
+                </div>
+                <div class="gallery-item" style="--i:1">
+                    <img src="images/lab.jpg" alt="Gallery 3">
+                    <div class="gallery-caption">Central Library</div>
+                </div>
+                 <div class="gallery-item" style="--i:2">
+                    <img src="images/1.jpg" alt="Gallery 1">
+                    <div class="gallery-caption">Campus View</div>
+                </div>
+                <div class="gallery-item" style="--i:3">
+                    <img src="images/1.jpg" alt="Gallery 4">
+                    <div class="gallery-caption">Sports Complex</div>
+                </div>
+                <div class="gallery-item" style="--i:4">
+                    <img src="images/3.webp" alt="Gallery 5">
+                    <div class="gallery-caption">Auditorium</div>
+                </div>
+                <div class="gallery-item" style="--i:5">
+                    <img src="images/2.jpg" alt="Gallery 6">
+                    <div class="gallery-caption">Computer Lab</div>
+                </div>
+                <div class="gallery-item" style="--i:6">
+                    <img src="images/6.webp" alt="Gallery 7">
+                    <div class="gallery-caption">Smart Classroom</div>
+                </div>
+                <div class="gallery-item" style="--i:7">
+                    <img src="images/2.jpg" alt="Gallery 8">
+                    <div class="gallery-caption">Botanical Garden</div>
+                </div>
+                <div class="gallery-item" style="--i:8">
+                    <img src="images/admin.jpg" alt="Gallery 9">
+                    <div class="gallery-caption">Student Hostel</div>
+                </div>
+                <div class="gallery-item" style="--i:9">
+                    <img src="images/logo.jpg" alt="Gallery 10">
+                    <div class="gallery-caption">Cultural Events</div>
+                </div>
+                <div class="gallery-item" style="--i:10">
+                    <img src="images/6.webp" alt="Gallery 11">
+                    <div class="gallery-caption">Seminar Hall</div>
+                </div>
+                <div class="gallery-item" style="--i:11">
+                    <img src="images/5.webp" alt="Gallery 12">
+                    <div class="gallery-caption">NSS Activity</div>
+                </div>
+                <div class="gallery-item" style="--i:12">
+                    <img src="images/4.webp" alt="Gallery 13">
+                    <div class="gallery-caption">College Canteen</div>
+                </div>
+                <div class="gallery-item" style="--i:13">
+                    <img src="images/admin.jpg" alt="Gallery 14">
+                    <div class="gallery-caption">Administrative Building</div>
+                </div>
+                <div class="gallery-item" style="--i:14">
+                    <img src="images/7.webp" alt="Gallery 15">
+                    <div class="gallery-caption">Campus Life</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Controls -->
+        <div class="gallery-controls text-center mt-5">
+            <button class="gallery-btn" onclick="pauseGallery()">
+                <i class="fas fa-pause" id="playPauseIcon"></i>
+            </button>
+            <button class="gallery-btn" onclick="prevImage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="gallery-btn" onclick="nextImage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Gallery Description -->
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div class="info-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div class="text-center" style="color: white;">
+                        <h3 class="fw-bold mb-3">Explore Our Campus</h3>
+                        <p class="fs-6" style="color: #cbd5e1;">Our gallery showcases the vibrant campus life, modern infrastructure, academic facilities, and various activities that make our college a center of excellence in education.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.gallery-3d-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    perspective: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.gallery-3d {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    animation: rotate3d 40s linear infinite;
+}
+
+.gallery-3d.paused {
+    animation-play-state: paused;
+}
+
+.gallery-item {
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    transform: 
+        translate(-50%, -50%)
+        rotateY(calc(var(--i) * 24deg))
+        translateZ(550px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.gallery-item:hover {
+    transform: 
+        translate(-50%, -50%)
+        rotateY(calc(var(--i) * 24deg))
+        translateZ(650px)
+        scale(1.1);
+    z-index: 10;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+}
+
+@keyframes rotate3d {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(-360deg);
+    }
+}
+
+.gallery-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-btn {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+}
+
+.gallery-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+}
+
+.gallery-btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .gallery-3d-container {
+        height: 400px;
+    }
+    
+    .gallery-3d {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .gallery-item {
+        width: 250px;
+        height: 180px;
+        transform: 
+            translate(-50%, -50%)
+            rotateY(calc(var(--i) * 24deg))
+            translateZ(400px);
+    }
+    
+    .gallery-item:hover {
+        transform: 
+            translate(-50%, -50%)
+            rotateY(calc(var(--i) * 24deg))
+            translateZ(450px)
+            scale(1.05);
+    }
+}
+</style>
+
+<script>
+let isPlaying = true;
+let currentRotation = 0;
+const gallery = document.getElementById('gallery3d');
+
+function pauseGallery() {
+    const icon = document.getElementById('playPauseIcon');
+    if (isPlaying) {
+        gallery.classList.add('paused');
+        icon.className = 'fas fa-play';
+    } else {
+        gallery.classList.remove('paused');
+        icon.className = 'fas fa-pause';
+    }
+    isPlaying = !isPlaying;
+}
+
+function prevImage() {
+    currentRotation += 24;
+    gallery.style.transform = `rotateY(${currentRotation}deg)`;
+}
+
+function nextImage() {
+    currentRotation -= 24;
+    gallery.style.transform = `rotateY(${currentRotation}deg)`;
+}
+
+// Pause on hover
+gallery.addEventListener('mouseenter', () => {
+    if (isPlaying) {
+        gallery.classList.add('paused');
+    }
+});
+
+gallery.addEventListener('mouseleave', () => {
+    if (isPlaying) {
+        gallery.classList.remove('paused');
+    }
+});
+</script>

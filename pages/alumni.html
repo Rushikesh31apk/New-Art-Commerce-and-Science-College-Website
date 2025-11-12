@@ -1,0 +1,277 @@
+<section class="section" style="background: linear-gradient(135deg, #f9fafb, #dbeafe);">
+    <div class="container">
+        <h2 class="section-title">Alumni Association</h2>
+        <p class="section-subtitle">Stay connected with your alma mater</p>
+        
+        <!-- About Alumni Association -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="info-card" style="background: linear-gradient(135deg, #eff6ff, #dbeafe);">
+                    <h3 class="fw-bold mb-4">Maji Vidhyarthi Sangh (Alumni Association)</h3>
+                    <p class="text-secondary">The Alumni Association serves as a bridge between the college and its former students, fostering lifelong connections and contributing to institutional development.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aims & Objectives -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="info-card">
+                    <h3 class="fw-bold mb-4"><i class="fas fa-bullseye text-primary"></i> Aims & Objectives</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <ul class="list-unstyled">
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Create awareness of higher education and its necessity</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Develop reading, writing, speaking and conversation skills of students</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Suggest and discuss academic and administrative patterns</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Encourage students for better performance</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Cooperate with students for academic and other activities</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Conduct debates on burning problems and increase social awareness</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <ul class="list-unstyled">
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Create awareness about nature and nature conservation</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Guide students regarding employment and self-employment</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Organize sports camps and cultural activities</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Felicitate teachers for their achievements</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Provide financial assistance to needy and poor students</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Motivate students towards achieving their goals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documents -->
+        <div class="row mb-5">
+            <div class="col-lg-4 mb-4">
+                <div class="info-card text-center">
+                    <div class="card-icon mx-auto" style="background: linear-gradient(135deg, #3b82f6, #6366f1);">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h5 class="fw-bold mt-3">Registration Letter</h5>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-2">Download</a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="info-card text-center">
+                    <div class="card-icon mx-auto" style="background: linear-gradient(135deg, #10b981, #14b8a6);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5 class="fw-bold mt-3">Executive Body 2021-22</h5>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-2">View Details</a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="info-card text-center">
+                    <div class="card-icon mx-auto" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h5 class="fw-bold mt-3">Alumni Meet 2021-22</h5>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-2">View Report</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alumni Registration Form -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="info-card">
+                    <h3 class="fw-bold mb-4 text-center">Alumni Registration Form</h3>
+                    <p class="text-center text-secondary mb-4">Fields marked with an * are required</p>
+                    
+                    <form id="alumniForm" onsubmit="submitAlumniForm(event)">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" name="fullName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Mobile Number *</label>
+                                <input type="tel" class="form-control" name="mobile" pattern="[0-9]{10}" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email Id</label>
+                                <input type="email" class="form-control" name="email">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Address *</label>
+                                <input type="text" class="form-control" name="address" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Degree Obtained from this College *</label>
+                                <select class="form-select" name="degree" required>
+                                    <option value="">Select Degree</option>
+                                    <option value="B.A.">B.A.</option>
+                                    <option value="B.Com.">B.Com.</option>
+                                    <option value="B.Sc.">B.Sc.</option>
+                                    <option value="B.Voc.">B.Voc.</option>
+                                    <option value="M.A.">M.A.</option>
+                                    <option value="M.Com.">M.Com.</option>
+                                    <option value="M.Sc.">M.Sc.</option>
+                                    <option value="B.B.A.-C.A.">B.B.A.-C.A.</option>
+                                    <option value="B.C.A.">B.C.A.</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Year of Passing *</label>
+                                <input type="number" class="form-control" name="yearOfPassing" min="1977" max="2025" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">What is your current position and profession? *</label>
+                            <textarea class="form-control" name="currentPosition" rows="2" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Do you have acquired any additional degree/qualification after leaving this college? If yes, Give details? *</label>
+                            <textarea class="form-control" name="additionalDegree" rows="2" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Do you have received any award/recognition in your professional career? If yes, Give details? *</label>
+                            <textarea class="form-control" name="awards" rows="2" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Do you find that the college is progressing as per the local needs? *</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="progressAsPerNeeds" value="Yes" required>
+                                    <label class="form-check-label">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="progressAsPerNeeds" value="No" required>
+                                    <label class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Do you think that the college is working as per its vision and mission? *</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="visionMission" value="Yes" required>
+                                    <label class="form-check-label">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="visionMission" value="No" required>
+                                    <label class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Do you feel proud to be associated with college as Alumni? *</label>
+                            <div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="proudAssociation" value="To full extent" required>
+                                    <label class="form-check-label">To full extent</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="proudAssociation" value="Up to some extent" required>
+                                    <label class="form-check-label">Up to some extent</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="proudAssociation" value="Not at all" required>
+                                    <label class="form-check-label">Not at all</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Do you think that, if you have studied elsewhere, would it be better than this college for shaping your life? *</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="studyElsewhere" value="Yes" required>
+                                    <label class="form-check-label">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="studyElsewhere" value="No" required>
+                                    <label class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Will you recommend your ward, relatives or friends to enroll for any course at New Arts, Commerce and Science College, Parner? *</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="recommend" value="Yes" required>
+                                    <label class="form-check-label">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="recommend" value="No" required>
+                                    <label class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">How would you like to contribute to the college for further strengthening? *</label>
+                            <textarea class="form-control" name="contribution" rows="3" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">How will you rate the college for the overall development? (1 to 5) *</label>
+                            <select class="form-select" name="rating" required>
+                                <option value="">Select Rating</option>
+                                <option value="5">5 - Excellent</option>
+                                <option value="4">4 - Very Good</option>
+                                <option value="3">3 - Good</option>
+                                <option value="2">2 - Fair</option>
+                                <option value="1">1 - Poor</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Mention one thing of the college which you like most. *</label>
+                            <textarea class="form-control" name="likeMost" rows="2" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Mention one thing that you would like to suggest for further development of college. *</label>
+                            <textarea class="form-control" name="suggestion" rows="2" required></textarea>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5">
+                                <i class="fas fa-paper-plane me-2"></i>Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function submitAlumniForm(event) {
+    event.preventDefault();
+    
+    const form = document.getElementById('alumniForm');
+    const formData = new FormData(form);
+    
+    let emailBody = 'Alumni Registration Form Submission\n\n';
+    
+    for (let [key, value] of formData.entries()) {
+        const label = form.querySelector(`[name="${key}"]`).previousElementSibling?.textContent || key;
+        emailBody += `${label}: ${value}\n\n`;
+    }
+    
+    const mailtoLink = `mailto:nacscp@gmail.com?subject=Alumni Registration Form&body=${encodeURIComponent(emailBody)}`;
+    window.location.href = mailtoLink;
+    
+    alert('Thank you for your submission! Your email client will open to send the form.');
+}
+</script>
